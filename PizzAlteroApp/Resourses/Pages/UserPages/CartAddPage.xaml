@@ -1,0 +1,39 @@
+﻿<Page x:Class="PizzAlteroApp.Resourses.Pages.UserPages.CartAddPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PizzAlteroApp.Resourses.Pages.UserPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="403" d:DesignWidth="800"
+      Title="CartAddPage">
+
+    <Grid Background="#f7e5dd">
+        <StackPanel Height="403" Width="800" HorizontalAlignment="Center">
+            <StackPanel Width="450" Margin="0,70,0,0">
+                <Label FontSize="20" Width="210" HorizontalAlignment="Left"
+                           FontStyle="Italic"
+                           FontWeight="Heavy"
+                           Foreground="#533840">Код пользователя:</Label>
+                <ComboBox SelectedValue="{Binding id_user}" Height="30" Width="200" BorderThickness="2" BorderBrush="Black" x:Name="CmbSelectUser" Margin="210,-35,0,0"/>
+            </StackPanel>
+            <StackPanel Width="450">
+                <Label FontSize="20" Width="175" HorizontalAlignment="Left"
+                           FontStyle="Italic"
+                           FontWeight="Heavy"
+                           Foreground="#533840">Продукт:</Label>
+                <ComboBox SelectedValue="{Binding id_Product}" Height="30" Width="200" BorderThickness="2" BorderBrush="Black" x:Name="CmbSelectProduct" Margin="210,-35,0,0"/>
+            </StackPanel>
+            <StackPanel Width="400">
+                <Button Style="{StaticResource RoundButtonTemplate2}"
+                    Height="40" Width="100"
+                    Content="Добавить"
+                    FontSize="15"
+                    Foreground="#533840" 
+                    FontWeight="Medium"
+                    FontStyle="Italic"
+                    Margin="0,10,00,0" Click="AddCartProduct_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

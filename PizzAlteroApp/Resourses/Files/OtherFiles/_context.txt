@@ -1,0 +1,14 @@
+private static PizzAltero_DataBaseEntities _context;
+        public PizzAltero_DataBaseEntities()
+            : base("name=PizzAltero_DataBaseEntities")
+        {
+        }
+
+        public static PizzAltero_DataBaseEntities GetContext()
+        {
+            if (_context == null)
+
+                _context = new PizzAltero_DataBaseEntities();
+
+            return _context;
+        }

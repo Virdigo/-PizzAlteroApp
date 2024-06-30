@@ -1,0 +1,63 @@
+﻿<Page x:Class="PizzAlteroApp.Resourses.Pages.AdminPages.ProductAdd"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PizzAlteroApp.Resourses.Pages.AdminPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="403" d:DesignWidth="800"
+      Title="ProductAdd">
+
+    <Grid Background="#f7e5dd">
+        <StackPanel Height="403" Width="800" HorizontalAlignment="Center">
+            <StackPanel Width="400" Margin="0,70,0,0">
+                <Label FontSize="20" Width="175" HorizontalAlignment="Left"
+                           FontStyle="Italic"
+                           FontWeight="Heavy"
+                           Foreground="#533840">Имя продукта:</Label>
+                <TextBox Text="{Binding ProductName}" Height="30" Width="200" Margin="150,-35,0,0" x:Name="TBoxProductName"/>
+            </StackPanel>
+            <StackPanel Width="400">
+                <Label FontSize="20" Width="175" HorizontalAlignment="Left"
+                           FontStyle="Italic"
+                           FontWeight="Heavy"
+                           Foreground="#533840">Тип продукта:</Label>
+                <ComboBox SelectedValue="{Binding id_ProductType}" Height="30" Width="200" BorderThickness="2" BorderBrush="Black" x:Name="CmbProductType" Margin="150,-35,0,0" SelectionChanged="CmbProductType_SelectionChanged"/>
+            </StackPanel>
+            <StackPanel Width="400">
+                <Label FontSize="20" Width="115" HorizontalAlignment="Left" Margin="30,0,0,0"
+                           FontStyle="Italic"
+                           FontWeight="Heavy"
+                           Foreground="#533840">Описание:</Label>
+                <TextBox Text="{Binding Description}" Height="30" Width="200" Margin="150,-35,0,0" x:Name="TBoxProductDescription"/>
+            </StackPanel>
+            <StackPanel Width="400">
+                <Label FontSize="20" Width="70" HorizontalAlignment="Left" Margin="50,0,0,0"
+                           FontStyle="Italic"
+                           FontWeight="Heavy"
+                           Foreground="#533840">Цена:</Label>
+                <TextBox Text="{Binding Price}" Height="30" Width="200" Margin="150,-35,0,0" x:Name="TBoxProductPrice"/>
+            </StackPanel>
+            <StackPanel Width="400">
+                <Button Style="{StaticResource RoundButtonTemplate2}"
+                    Height="40" Width="100"
+                    Content="Добавить"
+                    FontSize="15"
+                    Foreground="#533840" 
+                    FontWeight="Medium"
+                    FontStyle="Italic"
+                    Margin="0,10,00,0" Click="AddNewProduct_Click"/>
+            </StackPanel>
+            <StackPanel Width="800">
+                <Button Style="{StaticResource RoundButtonTemplate2}"
+                    Height="40" Width="100"
+                    Content="Назад"
+                    FontSize="15"
+                    Foreground="#533840" 
+                    FontWeight="Medium"
+                    FontStyle="Italic"
+                    Margin="650,80,00,0" Click="BackToAdminPage_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>
